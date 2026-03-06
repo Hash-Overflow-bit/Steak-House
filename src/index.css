@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@100..900&family=Montserrat:wght@100..900&display=swap');
+
+:root {
+  --background: #000000;
+  --accent: #C5A059;
+  --text-primary: #FFFFFF;
+  --text-secondary: #999999;
+  --card-bg: rgba(20, 20, 20, 0.8);
+  --gold-glow: rgba(197, 160, 89, 0.3);
+  
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+  
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --border-gold: 1px solid var(--accent);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+.page-container {
+  min-height: 100vh;
+  padding: 80px 20px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 8vw, 3.5rem);
+  text-align: center;
+  margin: 0 auto 3rem;
+  position: relative;
+  display: block;
+  width: fit-content;
+  max-width: 95%;
+}
+
+.chef-img-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--accent);
+  z-index: 0;
+}
+
+@media (max-width: 768px) {
+  .chef-img-wrapper::before {
+    left: 0; /* Align perfectly on small screens */
+    top: -15px;
+  }
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background-color: var(--accent);
+}
+
+.gold-text {
+  color: var(--accent);
+}
+
+/* Buttons */
+.btn {
+  padding: 1rem 2rem;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  min-height: 48px; /* Mobile touch target */
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: #000;
+}
+
+.btn-primary:hover {
+  background-color: #FFFFFF;
+  box-shadow: 0 0 20px var(--gold-glow);
+}
+
+.btn-outline {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn-outline:hover {
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+
+.btn-icon {
+  color: var(--accent);
+  transition: var(--transition);
+}
+
+.btn-icon:hover {
+  color: #FFFFFF;
+  transform: translateX(5px);
+}
+
+.luxury-card {
+  background: var(--card-bg);
+  border: var(--border-gold);
+  padding: 1.5rem;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.luxury-card:hover {
+  border-color: #FFFFFF;
+  box-shadow: 0 0 20px var(--gold-glow);
+  transform: translateY(-5px);
+}
+
+/* Base Utility Classes */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+/* Sophie Glassmorphism Card Style (Global) */
+.menu-card-sophie {
+  position: relative;
+  height: 550px;
+  border-radius: 40px;
+  overflow: hidden;
+  background: #000;
+  transition: transform 0.3s ease;
+}
+
+.logo-img img {
+  margin-top: 2rem;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .logo-img img {
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-top: 1rem;
+  }
+}
+
+.menu-card-sophie:hover {
+  transform: translateY(-5px);
+}
+
+.menu-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.menu-card-category {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--accent);
+  z-index: 5;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 40%;
+  padding: 4rem 2rem 2.5rem;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  
+  /* Precision gradient blur transition for the TOP edge only */
+  mask-image: linear-gradient(to top, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, black 85%, transparent 100%);
+}
+
+.menu-card-content {
+  padding: 0;
+  border: none;
+}
+
+.menu-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFF;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-serif);
+}
+
+.menu-card-desc {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1.8rem;
+  font-weight: 300;
+}
+
+.menu-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-stats {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.price-tag {
+  font-weight: 700;
+  font-size: 1.1rem;
+  font-family: var(--font-heading);
+}
+
+.stats-tag {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: var(--font-heading);
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: clamp(2rem, 15vw, 4rem);
+    padding: 0 0.5rem;
+  }
+  .menu-card-sophie {
+    height: 480px;
+    border-radius: 32px;
+  }
+
+  .menu-card-content {
+    padding: 1.5rem;
+    border-radius: 24px;
+  }
+
+  .menu-card-title {
+    font-size: 1.25rem;
+  }
+}

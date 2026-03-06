@@ -1,0 +1,119 @@
+.menu-page {
+  padding-top: 140px;
+  background: var(--background);
+  min-height: 100vh;
+}
+
+.menu-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 0 2rem;
+}
+
+.menu-header .subtitle {
+  letter-spacing: 5px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.filter-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(0, 0, 0, 1);
+  backdrop-filter: blur(10px);
+  padding: 1rem 0;
+  margin-bottom: 4rem;
+  border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+.menu-filters {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0 2rem;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+.menu-filters::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.filter-btn {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  color: #999;
+  padding: 0.6rem 1.2rem;
+  transition: var(--transition);
+  white-space: nowrap;
+  border-radius: 50px;
+  border: 1px solid transparent;
+}
+
+.filter-btn:hover {
+  color: #FFF;
+}
+
+.filter-btn.active {
+  color: #000;
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+.menu-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem 10rem;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 3rem;
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .menu-filters {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-page {
+    padding-top: 100px;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 0 1.5rem;
+  }
+
+  .menu-card-desc {
+    display: block;
+  }
+
+  /* Specific card overrides for mobile grid */
+  .menu-card-sophie {
+    height: 480px !important;
+    border-radius: 32px !important;
+  }
+
+  .menu-card-title {
+    font-size: 1.25rem !important;
+    margin-bottom: 0.8rem !important;
+  }
+
+  .menu-card-overlay {
+    padding: 2.5rem 1.5rem 1.5rem !important;
+    min-height: 40% !important;
+    background: rgba(0, 0, 0, 0.75) !important;
+  }
+}

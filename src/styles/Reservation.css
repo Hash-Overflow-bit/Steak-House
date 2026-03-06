@@ -1,0 +1,76 @@
+.reservation-page-wrapper {
+  padding: 120px 20px 80px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: var(--background);
+}
+
+.nusr-et-style.page-version {
+  position: static;
+  transform: none;
+  width: 100%;
+  max-width: 1100px;
+  max-height: none;
+  background: rgba(15, 15, 15, 0.5);
+  backdrop-filter: blur(20px);
+  padding: 80px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: none; /* Page doesn't need floating shadow */
+}
+
+.page-version .res-main-title {
+  font-size: 3.5rem;
+  margin-bottom: 50px;
+}
+
+.page-version .res-split-layout {
+  gap: 100px;
+}
+
+.page-version .res-left-col {
+  flex: 1.1;
+}
+
+.page-version .res-right-col {
+  flex: 1;
+}
+
+.page-version .calendar-grid span {
+  height: 50px;
+  font-size: 1.1rem;
+}
+
+.page-version .day.selected {
+  width: 50px;
+}
+
+/* Page specific overrides */
+@media (max-width: 1100px) {
+  .page-version {
+    padding: 60px 40px;
+  }
+  
+  .page-version .res-split-layout {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 900px) {
+  .reservation-page-wrapper {
+    padding: 100px 15px 40px;
+  }
+
+  .nusr-et-style.page-version {
+    padding: 40px 20px;
+    background: #000;
+  }
+
+  .page-version .res-main-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+
+  /* Responsive order inherited from overlay styles works here too */
+}
