@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { Menu as MenuIcon, X, Bell } from 'lucide-react';
+import Logo from '../assets/images/logo-removebg-preview.png';
 import '../styles/Navbar.css';
 
 const Navbar = ({ onReservationOpen }) => {
@@ -32,7 +33,7 @@ const Navbar = ({ onReservationOpen }) => {
         {/* Center: Logo */}
         <div className="nav-center">
           <NavLink to="/" className="logo-img" onClick={closeMenu}>
-            <img src="../assets/images/logo-removebg-preview.png" alt=""  />
+            <img src={Logo} alt="Steak Studio Logo" />
           </NavLink>
         </div>
 
