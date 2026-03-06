@@ -322,16 +322,37 @@ button {
     padding: 0 0.5rem;
   }
   .menu-card-sophie {
-    height: 480px;
-    border-radius: 32px;
-  }
-
-  .menu-card-content {
-    padding: 1.5rem;
+    height: auto;
+    aspect-ratio: 1 / 1;
     border-radius: 24px;
   }
 
+  .menu-card-overlay {
+    padding: 1.5rem 1.2rem;
+    min-height: 50%;
+  }
+
   .menu-card-title {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+    gap: 8px;
+  }
+
+  .menu-card-desc {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .price-tag {
+    font-size: 0.9rem;
+  }
+
+  .stats-tag {
+    font-size: 0.6rem;
   }
 }

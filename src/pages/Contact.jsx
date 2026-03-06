@@ -77,7 +77,7 @@ const Contact = ({ onReservationOpen }) => {
 
               <div className="res-field-group full-width">
                 <label className="res-field-label">SUBJECT</label>
-                <div className="res-dropdown-pill">
+                <div className="res-dropdown-pill subject-pill">
                   <input type="text" placeholder="WHAT IS THIS ABOUT?" className="res-pill-input" />
                 </div>
               </div>

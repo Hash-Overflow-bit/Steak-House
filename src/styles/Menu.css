@@ -92,28 +92,9 @@
 
   .menu-grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
-    padding: 0 1.5rem;
+    gap: 1.5rem;
+    padding: 0 1rem;
   }
-
-  .menu-card-desc {
-    display: block;
-  }
-
-  /* Specific card overrides for mobile grid */
-  .menu-card-sophie {
-    height: 480px !important;
-    border-radius: 32px !important;
-  }
-
-  .menu-card-title {
-    font-size: 1.25rem !important;
-    margin-bottom: 0.8rem !important;
-  }
-
-  .menu-card-overlay {
-    padding: 2.5rem 1.5rem 1.5rem !important;
-    min-height: 40% !important;
-    background: rgba(0, 0, 0, 0.75) !important;
-  }
+  
+  /* Inheriting central square-ratio styles from index.css */
 }

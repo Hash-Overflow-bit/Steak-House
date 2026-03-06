@@ -1,14 +1,30 @@
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 4rem;
-  margin-top: 4rem;
+  grid-template-columns: 1fr; /* Switch to single column for better centering */
+  gap: 6rem;
+  margin: 6rem auto 0;
+  max-width: 1000px; /* Constrain for a more premium, centered feel */
 }
 
 .contact-info-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
+}
+
+.contact-header {
+  text-align: left;
+  margin-bottom: 4rem;
+}
+
+.contact-header .section-title {
+  margin-left: 0;
+  text-align: left;
+}
+
+.contact-header .section-title::after {
+  left: 0;
+  transform: none;
 }
 
 .info-card {
@@ -19,9 +35,9 @@
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 3rem 1.5rem;
+  align-items: flex-start;
+  text-align: left;
+  padding: 3rem 2rem;
   transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
   position: relative;
   overflow: hidden;
@@ -112,7 +128,12 @@
 }
 
 .contact-form-premium .res-field-group {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
+}
+
+.subject-pill {
+  min-height: 80px; /* Significantly increased height for subject field */
+  align-items: center;
 }
 
 .form-grid {
@@ -124,14 +145,21 @@
 
 .form-group.full-width {
   grid-column: span 2;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form-premium {
+  margin: 0 auto;
 }
 
 /* Map Section */
 .map-section {
   width: 100%;
-  height: 500px;
+  min-height: 600px;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   margin-top: 8rem;
   display: flex;
   justify-content: center;
@@ -141,10 +169,11 @@
 
 .map-overlay {
   background: rgba(0, 0, 0, 0.85);
-  padding: 3rem;
-  text-align: center;
-  border: var(--border-gold);
-  max-width: 500px;
+  padding: 4rem;
+  text-align: left;
+  border: 1px solid rgba(154, 123, 79, 0.3);
+  max-width: 600px;
+  backdrop-filter: blur(10px);
 }
 
 .map-overlay p {
@@ -152,14 +181,12 @@
   margin-bottom: 2rem;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 900px) {
   .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+    margin-top: 4rem;
+    gap: 4rem;
   }
-}
-
-@media (max-width: 600px) {
+  
   .contact-info-cards {
     grid-template-columns: 1fr;
   }
@@ -170,13 +197,25 @@
   
   .form-group.full-width {
     grid-column: span 1;
+    order: 10; /* Ensures button is last */
   }
   
-  .luxury-form {
-    padding: 2rem 1.5rem;
+  .nusr-et-style.contact-form-premium {
+    padding: 40px 20px;
   }
 
   .map-section {
-    height: 400px;
+    min-height: 450px;
+    margin-top: 5rem;
+  }
+
+  .map-overlay {
+    padding: 3rem 2rem;
+    width: 95%;
+  }
+
+  .res-main-title {
+    font-size: 2.22rem;
+    text-align: center;
   }
 }
