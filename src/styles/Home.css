@@ -514,9 +514,9 @@
 
   .grid-layout {
     grid-template-columns: 1fr;
-    max-width: 500px;
+    max-width: 650px; /* Increased width to show more image details */
     margin: 0 auto;
-    gap: 1.5rem;
+    gap: 2rem;
   }
 
   .bento-grid-container {

@@ -32,7 +32,7 @@ const Navbar = ({ onReservationOpen }) => {
         {/* Center: Logo */}
         <div className="nav-center">
           <NavLink to="/" className="logo-img" onClick={closeMenu}>
-            <img src="src/assets/images/logo-removebg-preview.png" alt=""  />
+            <img src="../assets/images/logo-removebg-preview.png" alt=""  />
           </NavLink>
         </div>
 

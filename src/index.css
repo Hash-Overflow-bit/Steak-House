@@ -323,13 +323,15 @@ button {
   }
   .menu-card-sophie {
     height: auto;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 4 / 5; /* Tall square for better image breathing room */
     border-radius: 24px;
+    width: 100%;
   }
 
   .menu-card-overlay {
-    padding: 1.5rem 1.2rem;
-    min-height: 50%;
+    padding: 1.2rem 1.2rem;
+    min-height: 35%; /* Reduced to show more image */
+    background: rgba(0, 0, 0, 0.65); /* Slightly more transparent */
   }
 
   .menu-card-title {
